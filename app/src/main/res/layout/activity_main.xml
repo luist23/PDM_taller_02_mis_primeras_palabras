@@ -15,9 +15,11 @@
     <!-- TODO (2.1) El valor de gravedad no esta asignado -->
     <!-- TODO (2.2) El ancho y el alto debe ser match_parent -->
     <include
+
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+    />
 
 
     <!-- TODO(3) Permite mostrar un menú lateral con una cabecera y opciones -->
@@ -30,6 +32,11 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/activity_main_drawer"
+    android:background="@color/ModoOscuro"
+        app:itemTextColor="@color/Blanco"
+        app:itemIconTint="@color/Blanco"
+
+    />
 
 </android.support.v4.widget.DrawerLayout>
