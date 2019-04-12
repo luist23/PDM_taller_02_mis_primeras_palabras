@@ -22,23 +22,23 @@ import com.naldana.ejemplo10.utils.networking.drivers.CurrencyDriver
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    var twoPane =  false
+    var twoPane = false
     private val tag = "MainActivity"
     private lateinit var manager: GridLayoutManager
 
-    fun setAdapter(data: ArrayList<Coin>){
+    fun setAdapter(data: ArrayList<Coin>) {
         // TODO (20) Para saber si estamos en modo dos paneles
-        if (fragment_content != null ){
-            twoPane =  true
+        if (fragment_content != null) {
+            twoPane = true
         }
         recyclerview.apply {
             setHasFixedSize(true)
-            adapter = MoneyAdapter(data){
+            adapter = MoneyAdapter(data) {
                 Log.i("datalink", it.name)
             }
-            if(twoPane){
-            layoutManager = GridLayoutManager(this.context, 1)}
-            else{
+            if (twoPane) {
+                layoutManager = GridLayoutManager(this.context, 1)
+            } else {
                 layoutManager = GridLayoutManager(this.context, 2)
             }
         }
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
-            startActivity(Intent(this, CurrencyAdder::class.java))
+           // startActivity(Intent(this, CurrencyAdder::class.java))
         }
 
 
@@ -80,8 +80,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // TODO (14) Se configura el listener del menu que aparece en la barra lateral
         // TODO (14.1) Es necesario implementar la inteface {{@NavigationView.OnNavigationItemSelectedListener}}
         nav_view.setNavigationItemSelectedListener(this)
-
-
 
 
         /*
@@ -129,7 +127,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             // TODO (14.3) Los Id solo los que estan escritos en el archivo de MENU
             R.id.nav_camera -> {
-
+                startActivity(Intent(this, CurrencyAdder::class.java))
             }
             R.id.nav_gallery -> {
 

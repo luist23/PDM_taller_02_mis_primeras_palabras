@@ -1,10 +1,14 @@
 package com.naldana.ejemplo10.utils.firebase
 
+import android.support.annotation.NonNull
 import android.util.Log
+import android.widget.Toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.naldana.ejemplo10.CurrencyAdder
+import com.naldana.ejemplo10.R
 import com.naldana.ejemplo10.pojo.Coin
 
 class Database {
@@ -30,7 +34,12 @@ class Database {
     }
 
     fun addCurrency(dataCoin: Coin) {
-        database.child("monedas").child(dataCoin.name).setValue(dataCoin)
+        database.child(dataCoin.name).setValue(dataCoin)
+            .addOnSuccessListener {
+                fun CurrencyAdder.toast(message: CharSequence) =
+                    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
+            }
     }
 
 

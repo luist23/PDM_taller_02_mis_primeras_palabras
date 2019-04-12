@@ -17,12 +17,12 @@ class CurrencyAdder : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_currency_adder)
-        findViewById<Button>(R.id.submit).setOnClickListener{
+        findViewById<Button>(R.id.submit).setOnClickListener {
             database.addCurrency(gater())
         }
     }
 
-    private fun gater():Coin = Coin(
+    private fun gater(): Coin = Coin(
         findViewById<EditText>(R.id.editText_name).text.toString(),
         findViewById<EditText>(R.id.editText_country).text.toString(),
         findViewById<EditText>(R.id.editText_year).text.toString(),

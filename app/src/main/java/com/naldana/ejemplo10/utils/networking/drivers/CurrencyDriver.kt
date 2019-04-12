@@ -20,34 +20,34 @@ class CurrencyDriver {
      * the http response into a Kotlin String
      * */
     private var httpAdapter = Retrofit.Builder()
-            .baseUrl(ServerInfo.baseURL)
-            .addConverterFactory(ScalarsConverterFactory.create())
-            .build()
+        .baseUrl(ServerInfo.baseURL)
+        .addConverterFactory(ScalarsConverterFactory.create())
+        .build()
 
 
-    fun getCurrencies(afterMetod: (ArrayList<Coin>) -> Unit){
+    fun getCurrencies(afterMetod: (ArrayList<Coin>) -> Unit) {
         httpAdapter.create(CurrencyInterface::class.java).requestCurrencies().enqueue(
-                object : Callback<String> {
+            object : Callback<String> {
 
-                    override fun onFailure(call: Call<String>, t: Throwable) {
-                        t.printStackTrace()
-                        Log.i(tag, "La conexion fallo o algo")
-                    }
+                override fun onFailure(call: Call<String>, t: Throwable) {
+                    t.printStackTrace()
+                    Log.i(tag, "La conexion fallo o algo")
+                }
 
-                    override fun onResponse(call: Call<String>, response: Response<String>) {
-                        when (response.code()) {
-                            200 -> {
-                                Log.d(tag, "Repose: " + response.body())
-                                afterMetod(CurrencyConverter().getCurrencyList(response.body()?: "{}"))
-                            }
+                override fun onResponse(call: Call<String>, response: Response<String>) {
+                    when (response.code()) {
+                        200 -> {
+                            Log.d(tag, "Repose: " + response.body())
+                            afterMetod(CurrencyConverter().getCurrencyList(response.body() ?: "{}"))
+                        }
 
-                            else -> {
-                                val unexpected = response.code().toString() + response.message().toString()
-                                Log.e(tag, unexpected)
-                            }
+                        else -> {
+                            val unexpected = response.code().toString() + response.message().toString()
+                            Log.e(tag, unexpected)
                         }
                     }
                 }
+            }
         )
     }
 }

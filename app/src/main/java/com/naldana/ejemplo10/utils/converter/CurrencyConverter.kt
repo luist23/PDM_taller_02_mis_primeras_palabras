@@ -10,13 +10,13 @@ class CurrencyConverter {
     private val gson = Gson()
 
 
-    fun getCurrencyList(data: String): ArrayList<Coin>{
+    fun getCurrencyList(data: String): ArrayList<Coin> {
         val dataContainer = JSONObject(data)
         val dataList = arrayListOf<Coin>()
         dataContainer.keys().forEach {
             dataList.add(gson.fromJson(dataContainer.get(it).toString(), Coin::class.java))
         }
-        return  dataList
+        return dataList
     }
 
 }

@@ -4,6 +4,6 @@ class ServerInfo {
 
     companion object {
         const val baseURL = "https://moneyapitaller2.firebaseio.com/"
-        const val monedaUrl = "/monedas.json"
+        const val monedaUrl = "/.json"
     }
 }
