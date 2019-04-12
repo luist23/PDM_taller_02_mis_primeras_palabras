@@ -5,61 +5,79 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".CurrencyAdder">
+        tools:context=".CurrencyAdder"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
 
     <TextView
-        android:text="@string/name"
-        android:layout_width="wrap_content"
+
+        android:text="@string/moneda_a_registrar"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/TittleNormal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text_name"
+        android:gravity="center"
         android:layout_weight="1"/>
 
     <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:hint="@string/name"
+            android:hint="@string/moneda_a_registrar"
             android:ems="10"
             android:id="@+id/editText_name"
+            android:gravity="center"
             android:layout_weight="1"/>
 
     <TextView
-            android:text="@string/country"
-            android:layout_width="wrap_content"
+            android:text="@string/Pais"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/text_country"
+            android:gravity="center"
+            android:textSize="@dimen/TittleNormal"
+            android:textColor="@color/colorAccent"
             android:layout_weight="1"/>
 
     <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:hint="@string/country"
+            android:hint="@string/Pais"
+            android:gravity="center"
             android:ems="10"
             android:id="@+id/editText_country"
             android:layout_weight="1"/>
 
     <TextView
-            android:text="@string/year"
-            android:layout_width="wrap_content"
+            android:text="@string/ValorenDolar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/TittleNormal"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
             android:id="@+id/text_year"
             android:layout_weight="1"/>
 
     <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:hint="@string/year"
+            android:hint="@string/ValorenDolar"
+            android:gravity="center"
             android:ems="10"
             android:id="@+id/editText_year"
             android:layout_weight="1"/>
 
     <TextView
-            android:text="@string/available"
-            android:layout_width="wrap_content"
+            android:text="@string/Disponibilidad"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/text_available"
+            android:gravity="center"
+            android:textSize="@dimen/TittleNormal"
+
             android:layout_weight="1"/>
     <CheckBox
             android:layout_width="wrap_content"
@@ -70,7 +88,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/submit"
-            android:id="@+id/submit"/>
+            android:id="@+id/submit"
+            android:textColor="@color/colorAccent"
+            android:background="@color/colorPrimaryDark"
+    />
 
 
 </LinearLayout>

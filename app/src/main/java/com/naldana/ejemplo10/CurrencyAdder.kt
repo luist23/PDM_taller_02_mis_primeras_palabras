@@ -16,7 +16,7 @@ class CurrencyAdder : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_currency_adder)
+        setContentView(R.layout.activity_registro)
         findViewById<Button>(R.id.submit).setOnClickListener {
             database.addCurrency(gater())
         }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ejemplo10</string>
+    <string name="app_name">Monedas de Paises</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -9,9 +9,10 @@
     <string name="loading">Loading…</string>
     <string name="nombre_moneda">Nombre Moneda</string>
     <string name="pais_moneda">Pais Moneda</string>
-    <string name="name">Name</string>
-    <string name="country">country</string>
-    <string name="year">year</string>
-    <string name="available">available</string>
+    <string name="Pais">Pais a Registrat</string>
+    <string name="Moneda">Moneda a registrar</string>
+    <string name="ValorenDolar">Valor en dolar</string>
+    <string name="Disponibilidad">available</string>
     <string name="submit">Submit</string>
+    <string name="moneda_a_registrar">Moneda a Registrar</string>
 </resources>
