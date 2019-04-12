@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Ejemplo10</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="loading">Loading…</string>
+    <string name="nombre_moneda">Nombre Moneda</string>
+    <string name="pais_moneda">Pais Moneda</string>
+    <string name="name">Name</string>
+    <string name="country">country</string>
+    <string name="year">year</string>
+    <string name="available">available</string>
+    <string name="submit">Submit</string>
+</resources>
