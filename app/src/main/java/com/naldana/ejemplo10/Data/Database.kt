@@ -8,18 +8,19 @@ import android.provider.BaseColumns
 // TODO(6) Se crea una cadena de texto con la instrucción de creación de tabla usando SQL.
 // TODO (6.1) El nombre de la tabla y el de las columnas se asignan según los datos definidos en el contrato.
 private const val SQL_CREATE_ENTRIES =
-    "CREATE TABLE ${DatabaseContract.PersonaEntry.TABLE_NAME} (" +
+    "CREATE TABLE ${DatabaseContract.CoinEntry.TABLE_NAME} (" +
             "${BaseColumns._ID} INTEGER PRIMARY KEY," +
-            "${DatabaseContract.PersonaEntry.COLUMN_DISPLAYNAME} TEXT," +
-            "${DatabaseContract.PersonaEntry.COLUMN_EMAIL} TEXT," +
-            "${DatabaseContract.PersonaEntry.COLUMN_USERNAME} TEXT)"
+            "${DatabaseContract.CoinEntry.COLUMN_NAME} TEXT," +
+            "${DatabaseContract.CoinEntry.COLUMN_COUNTRY} TEXT," +
+            "${DatabaseContract.CoinEntry.COLUMN_YEAR} TEXT," +
+            "${DatabaseContract.CoinEntry.COLUMN_AVAILABLE} TEXT)"
 
 
 // TODO(7) Se crea una cadena de texto con la instrucción de eliminación de tabla usando SQL.
 // TODO(7.1) Esto se hace para cuando sea necesario actualizar la estructura de la tabla.
 
 private const val SQL_DELETE_ENTRIES =
-    "DROP TABLE IF EXISTS ${DatabaseContract.PersonaEntry.TABLE_NAME}"
+    "DROP TABLE IF EXISTS ${DatabaseContract.CoinEntry.TABLE_NAME}"
 
 
 // TODO(5) Para poder crear una base de datos en el dispositivo móvil es necesario utilizar una instancia de SQLiteOperHelper.
@@ -42,7 +43,7 @@ class Database(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
 
     // TODO(11) Se definen en constantes, el nombre de la base de datos y la versión
     companion object {
-        const val DATABASE_NAME = "miprimerabase.db"
+        const val DATABASE_NAME = "coinsBase.db"
         const val DATABASE_VERSION = 1
     }
 }
